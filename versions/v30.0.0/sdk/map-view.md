@@ -21,7 +21,7 @@ If you have already integrated Google Sign In into your standalone app, this is 
     2.  Select your project and enable the **Google Maps Android API**
     3.  In `app.json`, copy the API key from `android.config.googleSignIn` to `android.config.googleMaps.apiKey`.
     4.  Rebuild your standalone app.
--   **If you already have not configured Google Sign In**
+-   **If you don't have configured Google Sign In**
     1.  Build your app, take note of your Android package name (eg: `ca.brentvatne.growlerprowler`)
     2.  Open your browser to the [Google API Manager](https://console.developers.google.com/apis) and create a project.
     3.  Once it's created, go to the project and enable the **Google Maps Android API**
@@ -30,7 +30,7 @@ If you have already integrated Google Sign In into your standalone app, this is 
     6.  Choose the **Android apps** radio button under **Key restriction**.
     7.  Click the **+ Add package name and fingerprint** button.
     8.  Add your `android.package` from `app.json` (eg: `ca.brentvatne.growlerprowler`) to the Package name field.
-    9.  Run `expo fetch:android:hashes`.
+    9.  Run `expo fetch:android:hashes`. If you don't have a Java Development Kit, download it here: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
     10. Copy `Google Certificate Fingerprint` from the output from step 9 and insert it in the "SHA-1 certificate fingerprint" field.
     11. Copy the API key (the first text input on the page) into `app.json` under the `android.config.googleMaps.apiKey` field. [See an example diff](https://github.com/brentvatne/growler-prowler/commit/3496e69b14adb21eb2025ef9e0719c2edbef2aa2).
     12. Press `Save` and then rebuild the app like in step 1.
